@@ -1,0 +1,120 @@
+/* Import Font Modern */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #0d6efd;
+    --dark-bg: #1a1d20;
+    --light-gray: #f8f9fa;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #5f6cf8;
+    line-height: 1.6;
+}
+
+/* --- Navigasi --- */
+.navbar {
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 5px;
+    position: relative;
+}
+
+/* Efek Garis Bawah saat Hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a6dcf5;
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* --- Hero Section (Halaman Utama) --- */
+.hero-section {
+    background: linear-gradient(135deg, #87bef5 0%, #047df6 100%);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+}
+
+/* --- Form & Card Styling --- */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.form-control, .form-select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25 darkgray;
+    border-color: var(--primary-color);
+}
+
+/* --- Tabel Pendaftaran --- */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.table-dark {
+    background-color: var(--dark-bg);
+}
+
+/* --- Multimedia Section --- */
+.ratio {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+img {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+img:hover {
+    filter: brightness(80%);
+    transform: scale(1.02);
+}
+
+/* --- Footer (Opsional) --- */
+footer {
+    background: var(--dark-bg);
+    color: rgb(117, 173, 241);
+    padding: 40px 0;
+    margin-top: 80px;
+}
