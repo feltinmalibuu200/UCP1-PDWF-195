@@ -64,7 +64,7 @@
     </div>
 
     <script>
-        // Inisialisasi Array Kosong
+
         let anggotaCommunity = [];
 
         const form = document.getElementById('memberForm');
@@ -73,18 +73,14 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Mengambil nilai input
             const nama = document.getElementById('nama').value;
             const email = document.getElementById('email').value;
             const minat = document.getElementById('minat').value;
 
-            // Memasukkan ke dalam Array (Object)
             anggotaCommunity.push({ nama, email, minat });
 
-            // Refresh tampilan tabel
             renderTable();
             
-            // Reset form setelah submit
             form.reset();
         });
 
